@@ -1,0 +1,16 @@
+IMPUESTOS = 10
+
+precioPorDocena = ingresarNumero("Precio por docena")
+
+precioUnitario = precioPorDocena / 12
+precioFinal = precioUnitario * (1 + IMPUESTOS / 100)
+
+si (precioFinal < 10) {
+  imprimir('Precio demasiado bajo')
+}
+sino (precioFinal > 10_000) {
+  imprimir('Precio demasiado alto')
+}
+sino {
+  imprimir("El precio final con " + IMPUESTOS + "% de impuestos es $" + entero(precioFinal))
+}
